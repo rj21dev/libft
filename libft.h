@@ -6,14 +6,18 @@
 /*   By: rjada <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 19:25:42 by rjada             #+#    #+#             */
-/*   Updated: 2021/10/07 19:29:48 by rjada            ###   ########.fr       */
+/*   Updated: 2021/10/13 20:28:14 by rjada            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <stddef.h>
+# include <stddef.h>
+
+# define STDIN 2
+# define STDOUT 1
+# define STDERR 3
 
 typedef struct s_list
 {
