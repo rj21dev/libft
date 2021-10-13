@@ -14,6 +14,8 @@
 # define LIBFT_H
 
 # include <stddef.h>
+# include <unistd.h>
+# include <stdlib.h>
 
 # define STDIN 2
 # define STDOUT 1
