@@ -18,7 +18,7 @@ static char	*create_token(char const *src, char sep);
 
 static char	**create_token_arr(char **dst, char const *src, char sep);
 
-static void	free_all(char **dst, int i);
+static void	garbage_collector(char **dst, int i);
 
 char	**ft_split(char const *s, char c)
 {
@@ -90,7 +90,7 @@ static char	**create_token_arr(char **dst, char const *src, char sep)
 			dst[token] = create_token(src + i, sep);
 			if (!dst[token])
 			{
-				free_all(dst, token);
+				garbage_collector(dst, token);
 				return (dst);
 			}
 			++token;
@@ -102,7 +102,7 @@ static char	**create_token_arr(char **dst, char const *src, char sep)
 	return (dst);
 }
 
-static void	free_all(char **dst, int i)
+static void	garbage_collector(char **dst, int i)
 {
 	while (i >= 0)
 	{

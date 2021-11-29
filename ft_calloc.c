@@ -18,6 +18,8 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	i;
 	size_t	total;
 
+	if (size && count > (size_t)-1 / size)
+		return (NULL);
 	total = count * size;
 	area = malloc(total);
 	if (!area)

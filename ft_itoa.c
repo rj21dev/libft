@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static int	count_mem(int nbr);
+static int	numlen(int nbr);
 
 static char	*putnbr_str(char *str, int nbr, int len, int sign);
 
@@ -22,7 +22,7 @@ char	*ft_itoa(int n)
 	int		len;
 	int		sign;
 
-	len = count_mem(n);
+	len = numlen(n);
 	sign = 1;
 	if (n < 0)
 		sign *= -1;
@@ -32,7 +32,7 @@ char	*ft_itoa(int n)
 	return (putnbr_str(res, n, len, sign));
 }
 
-static int	count_mem(int nbr)
+static int	numlen(int nbr)
 {
 	int	nbr_len;
 
